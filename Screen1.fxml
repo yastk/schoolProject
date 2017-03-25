@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="793.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TitledPane animated="false" layoutX="24.0" layoutY="72.0" prefHeight="185.0" prefWidth="468.0" text="Requester Details">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="153.0" prefWidth="646.0">
+               <children>
+                  <JFXTextField fx:id="requesterFullName" labelFloat="true" layoutX="15.0" layoutY="29.0" prefHeight="29.0" prefWidth="184.0" promptText="Full Name" />
+                  <JFXTextField fx:id="requesterEmailAddress" labelFloat="true" layoutX="259.0" layoutY="29.0" prefHeight="29.0" prefWidth="185.0" promptText="Email Address " />
+                  <JFXTextField fx:id="requesterPhoneNumber" labelFloat="true" layoutX="13.0" layoutY="81.0" prefHeight="29.0" prefWidth="187.0" promptText="Phone Number" />
+                  <JFXTextField fx:id="resquesterDepartment" labelFloat="true" layoutX="258.0" layoutY="81.0" prefHeight="29.0" prefWidth="186.0" promptText="Department " />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <JFXButton fx:id="requestAdd" buttonType="RAISED" layoutX="574.0" layoutY="563.0" onAction="#addTheRequest" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: lightblue;" text="Add">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="seePreviousRequests" buttonType="RAISED" layoutX="574.0" layoutY="600.0" onAction="#seeThePreviousRequests" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: lightblue;" text="See Previous Requesters">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="4.0" prefHeight="56.0" prefWidth="785.0" text="Requester Form" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" layoutX="24.0" layoutY="268.0" prefHeight="284.0" prefWidth="758.0" text="Request Details">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="742.0">
+               <children>
+                  <JFXTextField fx:id="requestActivityTitle" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="29.0" prefWidth="327.0" promptText="Activity Title" />
+                  <JFXTextField fx:id="requestEventObjective" labelFloat="true" layoutX="358.0" layoutY="14.0" prefHeight="29.0" prefWidth="327.0" promptText="Event Objective " />
+                  <JFXTextField fx:id="requestActivityType" labelFloat="true" layoutX="15.0" layoutY="69.0" prefHeight="29.0" prefWidth="326.0" promptText="Activity Type " />
+                  <JFXTextField fx:id="eventSynopsis" labelFloat="true" layoutX="15.0" layoutY="159.0" prefHeight="72.0" prefWidth="328.0" promptText="Event Synopsis " />
+                  <JFXTextField fx:id="requestExpectedNumberOfAttendees" labelFloat="true" layoutX="358.0" layoutY="65.0" prefHeight="37.0" prefWidth="225.0" promptText="Expected Number of Attendees " />
+                  <JFXTextField fx:id="requestSpecialRequests" labelFloat="true" layoutX="358.0" layoutY="202.0" prefHeight="29.0" prefWidth="378.0" promptText="Special Requests " />
+                  <JFXTimePicker fx:id="expectedStartTime" defaultColor="BLACK" layoutX="606.0" layoutY="72.0" onAction="#startTime" prefHeight="30.0" prefWidth="136.0" promptText="Expected Start Time" />
+                  <JFXTimePicker fx:id="expectedEndTime" defaultColor="BLACK" layoutX="606.0" layoutY="111.0" onAction="#endTime" prefHeight="30.0" prefWidth="136.0" promptText="Expected End Time" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="588.0" layoutY="72.0" prefHeight="185.0" prefWidth="194.0" text="Select Date for Event">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="153.0" prefWidth="646.0">
+               <children>
+                  <JFXDatePicker fx:id="datePicker" defaultColor="BLACK" layoutX="14.0" layoutY="39.0" onAction="#setDate" prefHeight="30.0" prefWidth="129.0" promptText="Select Date " />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
