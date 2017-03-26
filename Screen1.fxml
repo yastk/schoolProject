@@ -18,12 +18,12 @@
                   <JFXTextField fx:id="requesterFullName" labelFloat="true" layoutX="15.0" layoutY="29.0" prefHeight="29.0" prefWidth="184.0" promptText="Full Name" />
                   <JFXTextField fx:id="requesterEmailAddress" labelFloat="true" layoutX="259.0" layoutY="29.0" prefHeight="29.0" prefWidth="185.0" promptText="Email Address " />
                   <JFXTextField fx:id="requesterPhoneNumber" labelFloat="true" layoutX="13.0" layoutY="81.0" prefHeight="29.0" prefWidth="187.0" promptText="Phone Number" />
-                  <JFXTextField fx:id="resquesterDepartment" labelFloat="true" layoutX="258.0" layoutY="81.0" prefHeight="29.0" prefWidth="186.0" promptText="Department " />
+                  <JFXTextField fx:id="requesterDepartment" labelFloat="true" layoutX="258.0" layoutY="81.0" prefHeight="29.0" prefWidth="186.0" promptText="Department " />
                </children>
             </AnchorPane>
         </content>
       </TitledPane>
-      <JFXButton fx:id="requestAdd" buttonType="RAISED" layoutX="574.0" layoutY="563.0" onAction="#addTheRequest" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: lightblue;" text="Add">
+      <JFXButton fx:id="requestAdd" buttonType="RAISED" layoutX="574.0" layoutY="563.0" onAction="#onSubmit" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: lightblue;" text="Add">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

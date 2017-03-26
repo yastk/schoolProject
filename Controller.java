@@ -149,9 +149,15 @@ public class Controller implements Initializable {
     private AnchorPane pane1;
 
     @FXML
-    void addTheRequest(ActionEvent event) {
+    void onSubmit(ActionEvent event) {
+        Request entry = new Request(requesterFullName, requesterEmailAddress, resquesterDepartment, requestActivityTitle, requestEventObjective,
+                requestActivityType, eventSynopsis, requestExpectedNumberOfAttendees, requestSpecialRequests, expectedStartTime, expectedEndTime, datePicker);
 
+        //insert data in table
+        data.add(entry);
 
+        //clear textfields
+        clearForm();
     }
 
     @FXML

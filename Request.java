@@ -45,9 +45,12 @@ public class Request {
         this.datePicker = datePicker;
     }
 
+    public Request() {
+
+    }
 
     public String getRequesterFullName() {
-        return requesterFullName;
+        return this.requesterFullName;
     }
 
     public void setRequesterFullName(String requesterFullName) {
@@ -80,10 +83,22 @@ public class Request {
 
     public Button getRequestAdd() {
         return requestAdd;
+
     }
 
     public void setRequestAdd(Button requestAdd) {
         this.requestAdd = requestAdd;
+        /** Request request = new Request();
+         request.requesterFullName(requesterFullName.getText());
+         request.requesterEmailAddress(requestEmailAddress.getText());
+         request.setID(Integer.parseInt(IDInput.getText()));
+         request.setPhoneNum(Integer.parseInt(phoneNumInput.getText()));
+         request.setCountryFlyingFrom(countryFlyingFromInput.getText());
+         request.setCompanyWorkingFor(companyWorkingForInput.getText());
+         request.setHotelStayingAt(hotelStayingAtInput.getText());
+         request.setNationality(nationalityInput.getText());
+         request.setPassportNum(passportNumInput.getText());
+         table.getItems().add(request); **/
     }
 
     public Button getSeePreviousRequests() {
@@ -172,4 +187,6 @@ public class Request {
                 "football","play football", "sport", "-", 22 ,"-", "1200", "200", "12th of March");
 
     }
+
+
 }
