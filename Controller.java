@@ -13,8 +13,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -96,9 +98,6 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-
-
-
     @FXML
     private JFXTextField requesterFullName;
 
@@ -150,7 +149,19 @@ public class Controller implements Initializable {
 
     @FXML
     void onSubmit(ActionEvent event) {
-        Request entry = new Request(requesterFullName, requesterEmailAddress, resquesterDepartment, requestActivityTitle, requestEventObjective,
+        JFXButton requestAdd = new JFXButton("Add");
+        requestAdd.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent e) {
+                requestAdd.add(new Request(requesterFullName.getText(), requesterEmailAddress.getText(),
+                        Integer.parseInt(requesterPhoneNumber.getText()),resquesterDepartment.getText(),
+                        requestActivityTitle.getText(), requestEventObjective.getText(),requestActivityType.getText(),
+                        eventSynopsis.getText(), Integer.parseInt(requestExpectedNumberOfAttendees.getText()),requestSpecialRequests.getText(),
+                        expectedStartTime.getValue().toString(),expectedEndTime.getValue().toString(),datePicker.getValue().toString()));
+            }
+        });
+    }
+        /**Request entry = new Request(requesterFullName, requesterEmailAddress, requesterDepartment, requestActivityTitle, requestEventObjective,
                 requestActivityType, eventSynopsis, requestExpectedNumberOfAttendees, requestSpecialRequests, expectedStartTime, expectedEndTime, datePicker);
 
         //insert data in table
@@ -158,7 +169,7 @@ public class Controller implements Initializable {
 
         //clear textfields
         clearForm();
-    }
+    }*/
 
     @FXML
     void seeThePreviousRequests(ActionEvent event) throws IOException {

@@ -82,11 +82,12 @@ public class Screen2Controller {
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
-        //Stage stage;
-        //Parent root;
-        //if(event.getSource()==backButton){
-        //stage = (Stage) backButton.getScene().getWindow();
-        //root = FXMLLoader.load(getClass().getResource("Screen1.fxml"));
+        /**Stage stage;
+        Parent root;
+        if(event.getSource()==backButton){
+        stage = (Stage) backButton.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Screen1.fxml"));
+         **/
 
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Screen1.fxml"));
         rootPane.getChildren().setAll(pane);
