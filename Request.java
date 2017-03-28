@@ -3,12 +3,14 @@ package sample;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import javafx.scene.control.Button;
 
 
 /**
  * Created by 17YTariq on 24/03/2017.
  */
+//Request class
 public class Request {
     private String requesterFullName;
     private String requesterEmailAddress;
@@ -188,6 +190,17 @@ public class Request {
                 "football","play football", "sport", "-", 22 ,"-", "1200", "200", "12th of March");
 
     }
+
+    @Override
+    public String toString() {
+        return ("Full Name:"+this.getRequesterFullName()+" Email Address: "+ this.getRequesterEmailAddress() +" Phone Number: "+ this.getRequesterPhoneNumber() +
+                " Department: " + this.getRequesterDepartment() + " Activity Title: "+ this.getRequestActivityTitle()+ "Event Objective: " + this.getRequestEventObjective()+
+        "Activity Type: " + this.getRequestActivityType() + "Event Synopsis: " + this.getEventSynopsis() + "Expected Number of Attendees: " + this.getRequestExpectedNumberOfAttendees()+
+        "Expected Start Time: " + this.getExpectedStartTime() + "Expected End Time: " + this.getExpectedEndTime() + "Date: " + this.getDatePicker());
+    }
+
+
+
 
 
 }

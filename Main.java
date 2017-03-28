@@ -13,8 +13,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.lang.reflect.Array;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static sample.Screen2Controller.requestArrayList;
 
@@ -27,16 +32,20 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
 
-        /**requestList.add(new Request("Yasin", "yas2ktk@gmail.com", 123415, "finance",
+
+        /** ArrayList<Request> requestList = new ArrayList<Request>();
+         requestList.add(new Request("Yasin", "yas2ktk@gmail.com", 123415, "finance",
          "football", "play football", "sport", "-", 22, "-", "1200", "200", "12th of March"));
          requestList.add(new Request("Hassan", "has@gmail.com", 123415, "cars",
          "soccer", "play football", "sport", "playing soccer with bros", 100, "-", "1200", "200", "4th of March"));
          for (Request r : requestList) {
          r.getRequesterFullName();
          System.out.print(r.getRequesterFullName());
-         }*/
+         }
+**/
     }
 
+/**
     public void onSubmit(ActionEvent event) {
         // STEP 1: get the new entry from the form
         Request newentry = new Request("Yasin", "yas2ktk@gmail.com", 123415, "finance",
@@ -47,8 +56,11 @@ public class Main extends Application {
         requestList.add(newentry);
 
         // STEP 3: clear the form
-       newentry.clear();
+       newentry.clearForm();
    }
+   */
+
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -60,6 +72,8 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
 
 
         /**new PropertyValueFactory<Request, String>("Full Name");

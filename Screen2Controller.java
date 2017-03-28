@@ -2,12 +2,15 @@ package sample;
 
 import com.jfoenix.controls.JFXButton;
 
+import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +26,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
+//This is the controller for the final scene with the table in it
 /**
  * Created by 17YTariq on 24/03/2017.
  */
@@ -35,15 +39,24 @@ public class Screen2Controller {
 
     @FXML
     void initialize() {
+        /**
 
+         //tableColumnFullName.setCellValueFactory(new PropertyValueFactory<Table, String>("rFullName"));
+         //tableColumnEmailAddress.setCellValueFactory(new PropertyValueFactory<Table, String>("rEmailAddress"));
+         //tableColumnPhoneNumber.setCellValueFactory(new PropertyValueFactory<Table, String>("rPhoneNumber"));
+
+
+
+         //table.setItems(data);
+         **/
     }
 
-   /**
+/**
     @FXML
-    private JFXTreeTableView<> table;
+    private JFXTreeTableView<Controller> table;
 
     @FXML
-    private TreeTableColumn<Request,String> tableColumnFullName;
+    private TreeTableColumn<Controller,String> tableColumnFullName;
 
     @FXML
     private TreeTableColumn<Request, String> tableColumnEmailAddress;
@@ -71,9 +84,9 @@ public class Screen2Controller {
 
     @FXML
     private TreeTableColumn<Request, String> tableColumnSpecialRequests;
-    **/
 
-
+    final ObservableList<Request> data = FXCollections.observableArrayList();
+**/
     @FXML
     private AnchorPane rootPane;
 
